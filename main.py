@@ -3,9 +3,7 @@ import urllib.parse
 import json
 from secrets import access_token, redirect_uri, client_id, refresh_token
 
-'''
-How to generate a new refresh token if old one has completely expired (older than 90 days)
-'''
+# How to generate a new refresh token if old one has completely expired (older than 90 days)
 def generate_refresh_token():
     auth_url = "https://auth.tdameritrade.com/auth?response_type=code&redirect_uri=" + urllib.parse.quote(redirect_uri) + "&client_id=" + urllib.parse.quote(client_id) + "%40AMER.OAUTHAP"
     print(auth_url)
@@ -23,9 +21,7 @@ def generate_refresh_token():
     3. Save the refresh_token and access_token
     '''
 
-'''
-To be used to obtain a 30 minute access_token
-'''
+# To be used to obtain a 30 minute access_token
 def refresh_access_token():
     auth_url = "https://api.tdameritrade.com/v1/oauth2/token"
     reqData = {
@@ -36,9 +32,8 @@ def refresh_access_token():
     response = requests.post(auth_url, reqData)
     print(response.content)
 
-'''
-Fetches and prints a Json of all account details
-'''
+
+# Fetches and prints a Json of all account details
 def get_accounts():
     endpoint = "https://api.tdameritrade.com/v1/accounts"
     headers = {'Authorization': "Bearer {}".format(access_token)}
