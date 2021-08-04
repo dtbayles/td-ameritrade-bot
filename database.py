@@ -1,12 +1,8 @@
 import pymongo
 import urllib.parse
-from secrets import db_pw
+from secrets import CONNECTION_STRING
 
 # This project uses MongoDB
-
-CONNECTION_STRING = "mongodb+srv://drew:" + urllib.parse.quote(db_pw) + "@cluster0.2ljw7.mongodb.net/retryWrites=true&w=majority"
-DB_NAME = "td_bot"
-
 def test_db_connection():
     '''
     Primarily for testing purposes. Connects to a MongoDB cluster
