@@ -1,0 +1,78 @@
+ERROR | 2021-08-06 00:21:17
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 56, in setupTraders
+    for account_id, info in user["Accounts"].items():
+AttributeError: 'str' object has no attribute 'items'
+
+ERROR | 2021-08-06 00:29:44
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 53, in setupTraders
+    "isDayTrader": false,
+NameError: name 'false' is not defined
+
+ERROR | 2021-08-06 00:30:24
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 48, in setupTraders
+    'Accounts': {{
+TypeError: unhashable type: 'dict'
+
+ERROR | 2021-08-06 00:32:36
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 291, in setupTraders
+    for account_id, info in user["Accounts"].items():
+AttributeError: 'str' object has no attribute 'items'
+
+ERROR | 2021-08-06 00:34:31
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 294, in setupTraders
+    connected = tdameritrade.initial_connect()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 52, in initial_connect
+    is_valid = self.check_token_validity()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 70, in check_token_validity
+    self.headers.update({"Authorization": f"Bearer {user['Accounts'][self.account_id]['access_token']}"})
+KeyError: 'access_token'
+
+ERROR | 2021-08-06 00:35:30
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 52, in setupTraders
+    connected = tdameritrade.initial_connect()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 52, in initial_connect
+    is_valid = self.check_token_validity()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 70, in check_token_validity
+    self.headers.update({"Authorization": f"Bearer {user['Accounts'][self.account_id]['access_token']}"})
+KeyError: 'access_token'
+
+ERROR | 2021-08-06 00:37:16
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 52, in setupTraders
+    connected = tdameritrade.initial_connect()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 52, in initial_connect
+    is_valid = self.check_token_validity()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 73, in check_token_validity
+    age_sec = round(time.time() - user["Accounts"][self.account_id]["created_at"])
+KeyError: 'created_at'
+
+ERROR | 2021-08-06 00:37:43
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 52, in setupTraders
+    connected = tdameritrade.initial_connect()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 52, in initial_connect
+    is_valid = self.check_token_validity()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 68, in check_token_validity
+    token = self.getNewTokens(user["Accounts"][self.account_id])
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 131, in getNewTokens
+    'refresh_token': token["refresh_token"],
+KeyError: 'refresh_token'
+
+ERROR | 2021-08-06 00:40:19
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 52, in setupTraders
+    connected = tdameritrade.initial_connect()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 52, in initial_connect
+    is_valid = self.check_token_validity()
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 70, in check_token_validity
+    token = self.getNewTokens(user["Accounts"][self.account_id])
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/tdameritrade/__init__.py", line 135, in getNewTokens
+    'refresh_token': token["refresh_token"],
+KeyError: 'refresh_token'
+
