@@ -1,0 +1,7 @@
+CRITICAL | 2021-08-08 19:06:42 | FAILED TO CONNECT TO MONGO!
+ERROR | 2021-08-08 19:06:42
+Traceback (most recent call last):
+  File "/Users/drew/GitHub/td-ameritrade-bot/main.py", line 49, in setupTraders
+    users = self.mongo.users.find({})
+AttributeError: 'MongoDB' object has no attribute 'users'
+

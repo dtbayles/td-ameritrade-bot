@@ -8,7 +8,8 @@ from mongo import MongoDB
 from assets.logger import Logger
 from tdameritrade import TDAmeritrade
 import database
-from secrets import access_token, redirect_uri, client_id, refresh_token, db_pw
+
+# from secrets import access_token, redirect_uri, client_id, refresh_token, db_pw
 
 '''
 User has:
@@ -18,6 +19,7 @@ User has:
     Name
     
 '''
+
 
 class Main:
 
@@ -35,7 +37,7 @@ class Main:
         Fetches all accounts form the database
         :return:
         """
-        #Fetch trading account from database
+        # Fetch trading account from database
 
     def setupTraders(self):
         """ METHOD GETS ALL USERS ACCOUNTS FROM MONGO AND CREATES LIVE TRADER INSTANCES FOR THOSE ACCOUNTS.
@@ -54,7 +56,7 @@ class Main:
                             # obj = LiveTrader(user, self.mongo, PushNotification(
                             #     user["deviceID"], self.logger, self.gmail), self.logger, account_id, info["Asset_Type"],
                             #                  tdameritrade)
-                            #self.traders[account_id] = obj
+                            # self.traders[account_id] = obj
                             time.sleep(0.1)
                         else:
                             self.not_connected.append(account_id)
@@ -62,20 +64,18 @@ class Main:
         except Exception:
             self.logger.ERROR()
 
-
-
     # ToDo create MongoDB schema (research and see if it is best practice)
     def run(self):
         print("deez")
         self.setupTraders()
 
-        #current_access_token = database.get_access_token()
-        #print(current_access_token)
+        # current_access_token = database.get_access_token()
+        # print(current_access_token)
 
-        #new_access_token = td_api_requests.refresh_access_token()
-        #database.insert_access_token(new_access_token)
+        # new_access_token = td_api_requests.refresh_access_token()
+        # database.insert_access_token(new_access_token)
 
-        #database.test_db_connection()
+        # database.test_db_connection()
 
     # Todo check if the access token is alive and request a new one, if not
     def check_access_token_status(self):
