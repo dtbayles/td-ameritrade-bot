@@ -43,8 +43,8 @@ class TDAmeritrade:
     #@exception_handler
     def initial_connect(self):
         """
-        Initiates connection to TDAmeritrade by checking the access token validity, requestion a
-        new one if necessary, and logging all progress
+        Initiates connection to TDAmeritrade by checking the access token validity, request a
+        new one if necessary, and log all progress
         :return: true if successful, false if error
         """
         self.logger.INFO(

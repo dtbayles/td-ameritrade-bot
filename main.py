@@ -34,7 +34,7 @@ class Main:
 
     def initialize_accounts(self):
         """
-        Fetches all accounts form the database
+        Fetches all accounts from the database
         :return:
         """
         # Fetch trading account from database
@@ -45,7 +45,6 @@ class Main:
         """
         try:
             # GET ALL USERS ACCOUNTS
-
             users = self.mongo.users.find({})
             for user in users:
                 for account_id, info in user["Accounts"].items():
@@ -84,7 +83,7 @@ class Main:
 
 if __name__ == "__main__":
     """
-    START OF SCRIPT
+    Start of script
     """
 
     main = Main()
