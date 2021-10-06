@@ -1,0 +1,35 @@
+CRITICAL | 2021-10-06 14:11:04 | FAILED TO CONNECT TO MONGO!
+ERROR | 2021-10-06 14:11:04
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 48, in setupTraders
+    users = self.mongo.users.find({})
+AttributeError: 'MongoDB' object has no attribute 'users'
+
+CRITICAL | 2021-10-06 14:13:05 | FAILED TO CONNECT TO MONGO!
+ERROR | 2021-10-06 14:13:05
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 48, in setupTraders
+    users = self.mongo.users.find({})
+AttributeError: 'MongoDB' object has no attribute 'users'
+
+CRITICAL | 2021-10-06 14:13:42 | FAILED TO CONNECT TO MONGO!
+ERROR | 2021-10-06 14:13:42
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 48, in setupTraders
+    users = self.mongo.users.find({})
+AttributeError: 'MongoDB' object has no attribute 'users'
+
+CRITICAL | 2021-10-06 14:15:05 | FAILED TO CONNECT TO MONGO!
+ERROR | 2021-10-06 14:15:05
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 48, in setupTraders
+    users = self.mongo.users.find({})
+AttributeError: 'MongoDB' object has no attribute 'users'
+
+CRITICAL | 2021-10-06 14:16:26 | FAILED TO CONNECT TO MONGO!
+ERROR | 2021-10-06 14:16:26
+Traceback (most recent call last):
+  File "/Users/drewbayles/GitHub/td-ameritrade-bot/main.py", line 48, in setupTraders
+    users = self.mongo.users.find({})
+AttributeError: 'MongoDB' object has no attribute 'users'
+
